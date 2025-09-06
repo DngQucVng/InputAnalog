@@ -30,12 +30,12 @@ class InputAnalog {
 		// Set the resolution, default is 10bit
 		void set_resolution(uint32_t Bit);
 
-		// Read value at a rate of sampleRate times per second	
+		// Read value at a rate of sampleRate times per second
 		void check();
 
 	private:
 		const uint8_t PIN;
 
-		uint32_t value = 0, fullResolution; // fullResolution = 2^bitResolution-1
+		uint32_t value = 0, fullResolution; // fullResolution = 2^Bit-1
 		float sampleRate = 10.0; // Hz
 };
